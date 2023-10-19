@@ -1,39 +1,41 @@
 import { useEffect, useState } from "react";
 
+let recognition: SpeechRecognition | null = null;
+if ("webkitSpeechRecognition" in window) {
+  recognition = new webkitSpeechRecognition();
+  recognition.continuous = true;
+  recognition.lang = "en-US";
+}
+
 const useSpeechRecognition = () => {
   const [text, setText] = useState("");
   const [isListening, setIsListening] = useState(false);
-  const recognition = new window.webkitSpeechRecognition();
 
   useEffect(() => {
-    recognition.continuous = true;
-    recognition.lang = "en-US";
+    if (!recognition) return;
 
-    recognition.onresult = (event) => {
-      console.log("onresult event :", event);
-      setText(event.results[0][0].transcript);
-      recognition.stop();
+    recognition.onresult = (event: SpeechRecognitionEvent) => {
+      // console.log("onResultEvent : ", event.results[0][0].transcript);
+      setText((prev) => (prev += " " + event.results[0][0].transcript));
       setIsListening(false);
+      recognition?.stop();
     };
   }, []);
-
   const startListening = () => {
-    setText("");
     setIsListening(true);
-    recognition.start();
+    recognition?.start();
   };
-
   const stopListening = () => {
+    setText("");
     setIsListening(false);
-    recognition.stop();
+    recognition?.stop();
   };
-
   return {
     text,
     isListening,
     startListening,
     stopListening,
-    hasRecognitionSupport: "webkitSpeechRecognition" in window,
+    hasRecognitionSupport: !!recognition,
   };
 };
 

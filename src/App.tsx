@@ -1,9 +1,9 @@
-import Main from "./components/main";
+import Speech from "./components/speech";
 
 function App() {
   return (
     <>
-      <Main />
+      <Speech />
     </>
   );
 }
