@@ -2,7 +2,7 @@ gCreating a detailed README.md file for your TypeScript, Tailwind CSS, Vite, and
 
 # Voice Transcription App
 
-![App Screenshot](screenshot.png)
+![App Screenshot](https://github.com/hamid-Ft/voice-transcribe/blob/master/src/assets/Voice-Transcibe.gif)
 
 A simple web app that transcribes voice input using the Speech Recognition API supported in modern browsers. This app provides users with "Start Recording" and "Stop Recording" buttons to transcribe spoken words into text.
 
