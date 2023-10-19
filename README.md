@@ -4,7 +4,7 @@ gCreating a detailed README.md file for your TypeScript, Tailwind CSS, Vite, and
 
 ![App Screenshot](image/README/1697706986828.png "voice transcribe")
 
-A simple web app that transcribes voice input using the Speech Recognition API supported in modern browsers. This app provides users with "Start Recording" and "Stop Recording" buttons to transcribe spoken words into text.
+A simple web app that transcribes voice input using the Speech Recognition API supported in browsers. This app provides users with "Start Recording" and "Stop Recording" buttons to transcribe spoken words into text.
 
 ## Table of Contents
 
@@ -92,42 +92,18 @@ Contributions are welcome! To contribute to this project, follow these steps:
 
 Please ensure your code follows the project's coding standards and includes relevant tests.
 
+## Author
+
+- [@hamid-Ft](https://www.github.com/hamid-Ft)
+
+For additional information or questions, feel free to contact me:
+
+- Email: hamidfattahi.a@gmail.com
+
+Enjoy using your Voice Transcription App!
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
-
-For additional information or questions, feel free to contact me:
-
-- Email: hamidfattahi.a@gmail.com![1697706986828](image/README/1697706986828.png)
-
-Enjoy using your Voice Transcription App! If you have any further questions or need assistance with the README or your project, feel free to ask. Good luck with your interview!
-
-# My First README File
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
