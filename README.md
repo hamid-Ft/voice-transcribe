@@ -2,7 +2,7 @@ gCreating a detailed README.md file for your TypeScript, Tailwind CSS, Vite, and
 
 # Voice Transcription App
 
-![App Screenshot](https://github.com/hamid-Ft/voice-transcribe/blob/master/src/assets/Voice-Transcibe.gif)
+![App Screenshot](image/README/1697706986828.png "voice transcribe")
 
 A simple web app that transcribes voice input using the Speech Recognition API supported in modern browsers. This app provides users with "Start Recording" and "Stop Recording" buttons to transcribe spoken words into text.
 
@@ -36,20 +36,18 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/voice-transcription-app.git
+   git clone https://github.com/hamid-Ft/voice-transcribe.git
    ```
 
 2. Change to the project directory:
 
    ```bash
-   cd voice-transcription-app
+   cd voice-transcribe
    ```
 
-3. Install the project dependencies using [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/):
+3. Install the project dependencies using [npm](https://www.npmjs.com/):
 
    ```bash
-   yarn install
-   # or
    npm install
    ```
 
@@ -58,12 +56,10 @@ Before you begin, ensure you have met the following requirements:
 1. Start the development server:
 
    ```bash
-   yarn dev
-   # or
    npm run dev
    ```
 
-2. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
+2. Open your browser and navigate to [http://localhost:5173](http://localhost:5173)
 3. Click the "Start Recording" button to begin recording your voice.
 4. Speak into your microphone, and the app will transcribe your speech in real-time.
 5. Click the "Stop Recording" button to end the transcription.
@@ -104,8 +100,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For additional information or questions, feel free to contact me:
 
-- Email: your@email.com
-- Twitter: [@yourusername](https://twitter.com/yourusername)
+- Email: hamidfattahi.a@gmail.com![1697706986828](image/README/1697706986828.png)
 
 Enjoy using your Voice Transcription App! If you have any further questions or need assistance with the README or your project, feel free to ask. Good luck with your interview!
 
