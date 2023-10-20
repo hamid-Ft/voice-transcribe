@@ -1,4 +1,23 @@
-gCreating a detailed README.md file for your TypeScript, Tailwind CSS, Vite, and SWC-based
+# gHi, I'm Hamid! 👋
+
+## 🚀 About Me
+
+I'm a junior react developer
+
+## 🔗 Links
+
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://niklinkagency.com/projects)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hamidft/)
+
+## Other Common Github Profile Sections
+
+👩‍💻 I'm currently working on admin dashboard project see [here](https://github.com/hamid-Ft/admin-dashboard)
+
+🧠 I'm currently learning nextJs
+
+## 🛠 Skills
+
+WordPress dev , React , tailwind
 
 # Voice Transcription App
 
@@ -15,10 +34,6 @@ A simple web app that transcribes voice input using the Speech Recognition API s
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-
-## Demo
-
-You can check out a live demo of this app [here](#), or follow the instructions below to run it locally.
 
 ## Features
 
