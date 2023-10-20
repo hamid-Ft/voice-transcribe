@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect } from "react";
+import useSpeechRecognitionStore from "../store";
 
 const recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -8,9 +9,8 @@ mic.interimResults = true;
 mic.lang = "en-US";
 
 const useSpeechRecognition = () => {
-  const [text, setText] = useState("");
-  const [isListening, setIsListening] = useState(false);
-  const [notes, setNotes] = useState<string[]>([]);
+  const { text, isListening, notes, setText, setIsListening, setNotes } =
+    useSpeechRecognitionStore();
 
   const handleListen = useCallback(() => {
     if (isListening) {
@@ -40,7 +40,7 @@ const useSpeechRecognition = () => {
         console.log(event.error);
       };
     };
-  }, [isListening]);
+  }, [isListening, setText]);
 
   const handleNotes = () => {
     setNotes([...notes, text]);
