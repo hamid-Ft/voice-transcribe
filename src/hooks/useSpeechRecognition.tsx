@@ -1,41 +1,65 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-let recognition: SpeechRecognition | null = null;
-if ("webkitSpeechRecognition" in window) {
-  recognition = new webkitSpeechRecognition();
-  recognition.continuous = true;
-  recognition.lang = "en-US";
-}
+const recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const mic = new recognition();
+mic.continuous = true;
+mic.interimResults = true;
+mic.lang = "en-US";
 
 const useSpeechRecognition = () => {
   const [text, setText] = useState("");
   const [isListening, setIsListening] = useState(false);
+  const [notes, setNotes] = useState<string[]>([]);
+
+  const handleListen = useCallback(() => {
+    if (isListening) {
+      mic.start();
+      mic.onend = () => {
+        console.log("continue..");
+        mic.start();
+      };
+    } else {
+      mic.stop();
+      mic.onend = () => {
+        console.log("Stopped Mic on Click");
+      };
+    }
+    mic.onstart = () => {
+      console.log("Mics on");
+    };
+
+    mic.onresult = (event) => {
+      const transcript = Array.from(event.results)
+        .map((result) => result[0])
+        .map((result) => result.transcript)
+        .join("");
+      console.log(transcript);
+      setText(transcript);
+      mic.onerror = (event) => {
+        console.log(event.error);
+      };
+    };
+  }, [isListening]);
+
+  const handleNotes = () => {
+    setNotes([...notes, text]);
+    setText("");
+  };
 
   useEffect(() => {
-    if (!recognition) return;
+    handleListen();
+  }, [handleListen]);
 
-    recognition.onresult = (event: SpeechRecognitionEvent) => {
-      // console.log("onResultEvent : ", event.results[0][0].transcript);
-      setText((prev) => (prev += " " + event.results[0][0].transcript));
-      setIsListening(false);
-      recognition?.stop();
-    };
-  }, []);
-  const startListening = () => {
-    setIsListening(true);
-    recognition?.start();
-  };
-  const stopListening = () => {
-    setText("");
-    setIsListening(false);
-    recognition?.stop();
-  };
   return {
     text,
     isListening,
-    startListening,
-    stopListening,
-    hasRecognitionSupport: !!recognition,
+    notes,
+    setNotes,
+    handleListen,
+    handleNotes,
+    setIsListening,
+    hasRecognitionSupport: !!mic,
   };
 };
 
