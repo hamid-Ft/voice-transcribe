@@ -16,7 +16,7 @@ const Speech = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-blue-200 text-lg">
+    <div className="w-full min-h-[50vh] bg-blue-200 text-lg">
       {hasRecognitionSupport ? (
         <>
           <div className="flex  justify-center gap-12 pt-16">
