@@ -4,13 +4,13 @@ import "react-voice-recorder/dist/index.css";
 import axios from "axios";
 import { useEffect } from "react";
 
-const apiKey = import.meta.env.VITE_API_KEY;
+// const apiKey = import.meta.env.VITE_API_KEY;
 
 const assemblyAPI = axios.create({
   baseURL: "https://api.assemblyai.com/v2",
   headers: {
-    authorization: apiKey,
-    "conten-type": "application/json",
+    authorization: "01b35711f29f4fa98738baa18660c9bf",
+    "content-type": "application/json",
   },
 });
 
